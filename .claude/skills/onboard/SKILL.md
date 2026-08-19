@@ -54,6 +54,17 @@ something concrete you write later.
    at `.claude/skills/daily-brief-example/` — it's an illustration to read
    or rewrite, not something onboarding turns on.
 
+6a. **Voice/persona, if relevant.** Do they draft outbound communication
+    (email, messages) as themself often enough to want a consistent voice
+    and an outward/private persona split? This is only worth it at real
+    volume — if step 6 already showed low automation appetite, don't ask.
+    If yes: point them at `me/voice.md` and
+    `.claude/skills/voice-persona-example/` and explain that this template
+    won't generate voice content from a few interview answers — a voice
+    profile built that way is a guess, not a fingerprint. It gets built
+    later, iterating on real writing samples, per the instructions in those
+    two files. If no, leave both alone, same opt-out as daily-brief.
+
 7. **What's "hot."** What should count as top-of-mind enough for `hot.md`?
    Ask for real examples from their own situation rather than imposing a
    word limit or staleness rule.
@@ -89,7 +100,9 @@ something concrete you write later.
     clear they have no interest in a daily-brief-style automation, ask
     whether to delete `.claude/skills/daily-brief-example/` and
     `_templates/integrations.md` now or just leave them unused — either is
-    fine, don't delete without asking.
+    fine, don't delete without asking. Same question for
+    `me/voice.md` and `.claude/skills/voice-persona-example/` if step 6a
+    came back "no."
 
 12. **Write `me/about.md`** — who they are, what they want the assistant to
     know about how they think and work. Short.
@@ -125,6 +138,9 @@ something concrete you write later.
       where to look if/when they want a starting shape for one. Skip this
       bullet entirely if step 6 made clear they're not interested — don't
       plant the idea if they already said no.
+    - **Voice/drafting, if they want it later**: same pattern — one line
+      pointing at `me/voice.md` and `.claude/skills/voice-persona-example/`
+      if step 6a is a live interest, otherwise skip the bullet.
 
     This file is the answer to "ok, onboarding's done, now what" — write it
     so a re-read six months from now still makes sense without this

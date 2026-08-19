@@ -25,7 +25,12 @@ included for illustration: `.claude/skills/daily-brief-example/` sketches
 the shape of a recurring pull-from-an-external-source-then-ingest routine
 (with `_templates/integrations.md` explaining the general wiring pattern,
 using the open-source `gws` Google Workspace CLI as a worked example). It's
-not wired into onboarding and safe to delete.
+not wired into onboarding and safe to delete. A second, equally optional
+example covers drafting-as-you: `me/voice.md` +
+`.claude/skills/voice-persona-example/` sketch a voice profile, an
+outward-facing/private-sparring persona split with an explicit exposure
+boundary, and a final pass for stripping generic AI-writing tells before a
+draft goes out — again just a shape to build from, not shipped content.
 
 ## Use it
 

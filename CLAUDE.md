@@ -28,6 +28,11 @@ should reflect *your* workflow, not the defaults shipped here.
   `.claude/skills/daily-brief-example/` if you want a starting shape — it's
   opt-in, not part of onboarding, and safe to delete.)
 - Your own personas/voice for anything drafted *as* you, if you want that.
+  (An optional example lives at `me/voice.md` +
+  `.claude/skills/voice-persona-example/` if you want a starting shape for
+  an outward-facing-persona / private-sparring-persona split and a final
+  de-AI-ify pass before anything goes out — same opt-in, not-part-of-
+  onboarding rule as the daily-brief example.)
 
 ## Layout
 

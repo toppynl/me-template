@@ -26,5 +26,4 @@ Inkoop en fulfillment via [[zo-geregeld]]; klantenservice eigen; finance/HR/IT v
 
 | Kenmerk | Waarde |
 |---|---|
-| Omzet (2025) | ~€2 miljoen |
 | FTE | ~2 |

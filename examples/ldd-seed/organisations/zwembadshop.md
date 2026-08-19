@@ -23,5 +23,4 @@ Inkoop en fulfillment via [[zo-geregeld]]; klantenservice en webshop-IT eigen.
 | Kenmerk | Waarde |
 |---|---|
 | Eigendom | 50% LDD, 50% eigenaar |
-| Omzet | ~€1-2 miljoen per jaar |
 | FTE | 1 |

@@ -27,7 +27,6 @@ Overkoepelende holding; alle onderstaande B.V.'s vallen eronder.
 
 | Kenmerk | Waarde |
 |---|---|
-| Omzet (groep, 2025) | ~€58 miljoen |
 | FTE (groep) | ~60 |
 
 ## Locaties

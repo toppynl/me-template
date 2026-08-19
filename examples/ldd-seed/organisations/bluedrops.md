@@ -18,5 +18,4 @@ B2B-merk binnen [[ldd-holding]], eigen productontwikkeling/R&D (zwembad-/spa-mar
 
 | Kenmerk | Waarde |
 |---|---|
-| Omzet | ~€16 miljoen |
 | FTE | ~20 |

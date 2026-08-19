@@ -27,6 +27,5 @@ Inkoop, fulfillment en klantenservice via [[zo-geregeld]]; finance/HR/IT via [[g
 
 | Kenmerk | Waarde |
 |---|---|
-| Omzet (2025) | ~€32 miljoen |
 | FTE | ~15 |
 | Locatie | Veghel (hoofdkantoor/magazijn), Spijk (winkel) |

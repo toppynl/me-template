@@ -30,7 +30,12 @@ example covers drafting-as-you: `me/voice.md` +
 `.claude/skills/voice-persona-example/` sketch a voice profile, an
 outward-facing/private-sparring persona split with an explicit exposure
 boundary, and a final pass for stripping generic AI-writing tells before a
-draft goes out — again just a shape to build from, not shipped content.
+draft goes out — again just a shape to build from, not shipped content. A
+third optional piece is `examples/ldd-seed/` — a factually-reduced real org
+chart (LDD Holding, the company this template came from) for a colleague at
+the same company who'd rather copy in a starting `wiki/organisations/` +
+`wiki/people/` than type it from scratch. Not wired into onboarding, not
+relevant if you're not at LDD.
 
 ## Use it
 

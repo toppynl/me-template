@@ -1,0 +1,5 @@
+# log.md is append-only: if you ever run this vault from more than one
+# branch/session at once (e.g. a cloud agent alongside a local session),
+# a union merge keeps every entry from both sides instead of conflicting.
+# Harmless default even if you only ever work solo on one branch.
+log.md merge=union

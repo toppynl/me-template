@@ -23,7 +23,10 @@ should reflect *your* workflow, not the defaults shipped here.
   suggestion**, not a requirement. Drop what you don't use, add what you do.
 - Staleness thresholds, word limits, review cadence — all workflow taste.
 - Whether you want a daily-brief/inbox-triage style automation at all — that's
-  a heavy, opinionated layer; most people don't need it on day one.
+  a heavy, opinionated layer; most people don't need it on day one. (A
+  bare-bones, deliberately generic example lives in
+  `.claude/skills/daily-brief-example/` if you want a starting shape — it's
+  opt-in, not part of onboarding, and safe to delete.)
 - Your own personas/voice for anything drafted *as* you, if you want that.
 
 ## Layout
@@ -33,6 +36,7 @@ hot.md         short current-context snapshot (define your own bar for "signific
 index.md       catalog: every page, one line, grouped by type
 log.md         append-only operation log: `## [YYYY-MM-DD] <op> | <title>`
 me/            who you are and how you want the assistant to work with you
+               (how-to-use.md is your day-to-day cheat sheet, written by /onboard)
 now/           fast-changing current state (tasks, briefs, whatever you track)
 wiki/          the knowledge base itself — see suggested types below
 .raw/          immutable sources — read, never modify
@@ -83,12 +87,50 @@ related: []          # wikilinks
 Extend per type as needed — see `_templates/` for skeletons matching the
 suggested types above.
 
+If you keep the `status` field, it's a maturity ladder, not a workflow state:
+`seed` (just created, low trust, sparse) → `developing` (filling in) →
+`mature` (reliable, you'd act on it) → `evergreen` (stable, rarely changes).
+Drop the field entirely if you don't want to track this.
+
+## Archive & deprecation (a mechanic, not a taste call — keep or explicitly drop)
+
+Pages don't usually get deleted, because deleted pages break wikilinks and
+lose history. Two different situations, two different moves:
+
+- **Superseded** (a decision/choice got reversed, but the topic is still
+  live): keep the page where it is, add a `> ⛔ SUPERSEDED (date) by [[x]]`
+  banner at the top, and a `superseded_by:` frontmatter field pointing at
+  what replaced it.
+- **Obsolete** (the page is no longer relevant at all — a project ended, an
+  entity stopped existing): move the file into `archive/` and add
+  `archived: YYYY-MM-DD` + a one-line reason to its frontmatter. Existing
+  `[[wikilinks]]` to it still resolve; your reading discipline (hot → index →
+  pages) should skip `archive/` by default so stale material doesn't surface
+  uninvited.
+
 ## Conventions (adjust to taste)
 
 - Filenames: kebab-case, unique across the vault (wikilinks don't carry paths).
 - Links: `[[wikilink]]`, bidirectional — add the back-reference when you add a link.
 - One entity per file.
 - Log entries: `## [YYYY-MM-DD] <op> | <title>` so `grep "^## \[" log.md` works.
+- `.gitattributes` sets `log.md merge=union` so it never conflicts, even if
+  you branch or run more than one session at once — harmless if you don't.
+
+## Invariants (a checklist worth keeping even if you rewrite everything else)
+
+1. A wiki page you touch gets its `index.md` entry updated in the same pass —
+   don't let the catalog drift from reality.
+2. A genuinely significant state change gets `hot.md` refreshed — using
+   whatever bar you set for "hot," not every edit.
+3. Every operation appends one `log.md` entry — this is what makes the vault
+   auditable through `git log` instead of trusted on faith.
+4. Commit after each completed operation, small and descriptive — the commit
+   trail *is* the review mechanism.
+5. If you ever have the assistant take outward-facing action on your behalf
+   (sending a message, posting somewhere, creating a task in a shared tool),
+   decide during onboarding whether that needs your explicit approval first.
+   Most solo vaults never hit this; decide it once you do, not by default.
 
 ## Operations
 
@@ -97,12 +139,20 @@ suggested types above.
 in. Read each `SKILL.md` and edit the TODOs to match how you actually want to
 work. Add your own skills for anything else you want automated (briefs,
 triage, meeting prep, ...) — those are entirely workflow-specific and this
-template intentionally does not ship them.
+template intentionally does not ship them, other than one disabled-by-default
+illustration: `.claude/skills/daily-brief-example/` (paired with
+`_templates/integrations.md`) sketches the shape of a recurring
+pull-from-a-source-then-ingest routine. It's not switched on by anything and
+is meant to be rewritten or deleted, not used as shipped.
 
 ## Getting started
 
 1. Run `/onboard` (or read `.claude/skills/onboard/SKILL.md` and follow it manually).
 2. It will ask what you track and how you work, then generate your own
    `hot.md`, trim the entity-type list above to what you need, and seed a
-   handful of starter pages.
-3. Commit as you go — this is meant to be read through `git log`.
+   handful of starter pages from your actual current context.
+3. It ends by writing `me/how-to-use.md` — a short day-to-day cheat sheet
+   (how to ingest, how to query, when `hot.md` updates, how commits work as
+   the audit trail). Read that once onboarding finishes; that's genuinely
+   "now what."
+4. Commit as you go — this is meant to be read through `git log`.

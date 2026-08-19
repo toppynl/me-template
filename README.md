@@ -20,7 +20,12 @@ A thin scaffold, not a finished system:
 It deliberately does **not** ship a specific person's rules, thresholds, or
 automation habits (daily briefs, personas, staleness cutoffs, etc.) — those
 are workflow taste. You build those yourself, if and when you want them,
-using this as the base layer.
+using this as the base layer. One optional, disabled-by-default example is
+included for illustration: `.claude/skills/daily-brief-example/` sketches
+the shape of a recurring pull-from-an-external-source-then-ingest routine
+(with `_templates/integrations.md` explaining the general wiring pattern,
+using the open-source `gws` Google Workspace CLI as a worked example). It's
+not wired into onboarding and safe to delete.
 
 ## Use it
 

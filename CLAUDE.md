@@ -33,9 +33,6 @@ should reflect *your* workflow, not the defaults shipped here.
   an outward-facing-persona / private-sparring-persona split and a final
   de-AI-ify pass before anything goes out — same opt-in, not-part-of-
   onboarding rule as the daily-brief example.)
-- Whether you want to start `wiki/organisations/` and `wiki/people/` from
-  scratch, or copy in a real (factually-reduced) example org chart —
-  `examples/ldd-seed/` has one, same opt-in rule.
 
 ## Layout
 
@@ -155,9 +152,6 @@ is meant to be rewritten or deleted, not used as shipped.
 
 ## Getting started
 
-0. If you're an LDD colleague and want a real starting org chart instead of
-   an empty `wiki/`, check `examples/ldd-seed/` first — copy in what's
-   useful, skip it otherwise.
 1. Run `/onboard` (or read `.claude/skills/onboard/SKILL.md` and follow it manually).
 2. It will ask what you track and how you work, then generate your own
    `hot.md`, trim the entity-type list above to what you need, and seed a

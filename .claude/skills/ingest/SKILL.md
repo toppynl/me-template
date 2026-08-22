@@ -18,8 +18,18 @@ or by hand.
      conflict on the page rather than silently overwriting.
    - No → create it from `_templates/<type>.md`.
 4. Update `index.md` (one line per touched/new page) in the same pass.
-5. <!-- TODO: what counts as significant enough to update hot.md? Define
+5. **Dated backlinks** (only if you've adopted the Timeline convention — see
+   `CLAUDE.md`): for every `[[wikilink]]` this pass newly adds from a touched
+   page P to another page Q — a link that already existed before this ingest
+   doesn't fire, only ones just added — check Q's frontmatter `type:`. If Q
+   is one of the types you carry a `## Timeline` section on, append one line
+   to Q's own Timeline (below its `---` divider, newest entry first):
+   `- **YYYY-MM-DD** | [[P]] — <one-clause reason P now references Q>.` Log
+   line only — never touch Q's compiled-truth section above the divider, and
+   never edit Q's existing Timeline entries. Skip this step entirely if you
+   haven't adopted the Timeline convention.
+6. <!-- TODO: what counts as significant enough to update hot.md? Define
    your own bar, then note it here. --> Update `hot.md` if this ingest
    changes something that meets that bar.
-6. Append one `log.md` entry: `## [YYYY-MM-DD] ingest | <title>`.
-7. Commit.
+7. Append one `log.md` entry: `## [YYYY-MM-DD] ingest | <title>`.
+8. Commit.

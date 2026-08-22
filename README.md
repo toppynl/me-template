@@ -12,8 +12,11 @@ A thin scaffold, not a finished system:
 
 - Folder structure + typed YAML frontmatter schema for a wiki of entities
   (people, systems, decisions, ...)
-- Three minimal skills (`ingest`, `query`, `lint`) — mechanics only, no
-  opinionated rules baked in
+- Five minimal skills (`ingest`, `query`, `lint`, `context-audit`,
+  `correction-capture`) — mechanics only, no opinionated rules baked in
+- An optional `## Timeline` convention (see `CLAUDE.md`) for pages that
+  accumulate dated status over time, plus a `SessionEnd` auto-commit hook
+  (`.claude/scripts/vault-autocommit.sh`) — both opt-out, not mandates
 - An `onboard` skill that interviews you and turns the scaffold into
   something that fits *your* workflow
 
@@ -58,6 +61,7 @@ now/           fast-changing current state
 wiki/          the knowledge base — people/organisations/systems/... (edit to taste)
 .raw/          immutable source material
 _templates/    frontmatter skeletons per entity type
-.claude/       skills — onboard, ingest, query, lint
+.claude/       skills — onboard, ingest, query, lint, context-audit,
+               correction-capture; scripts/ for the optional auto-commit hook
 archive/       superseded/obsolete pages
 ```

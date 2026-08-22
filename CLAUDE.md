@@ -86,6 +86,8 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 tags: []
 related: []          # wikilinks
+aliases: []          # past names/spellings/repo names — never rename the file
+                     # to match a rename in the real world, add it here instead
 ---
 ```
 
@@ -96,6 +98,23 @@ If you keep the `status` field, it's a maturity ladder, not a workflow state:
 `seed` (just created, low trust, sparse) → `developing` (filling in) →
 `mature` (reliable, you'd act on it) → `evergreen` (stable, rarely changes).
 Drop the field entirely if you don't want to track this.
+
+**Timeline convention (optional, per type):** for any type whose pages accumulate
+dated status over time rather than staying point-in-time (candidates: initiative,
+system, person, organisation, risk, vendor, stance — this template ships the
+section on those seven; skip it on ones that are structurally point-in-time
+already, like decision/event, or too small/navigational to bother, like
+concept/metric/topic), the page carries a `## Timeline` section at the bottom,
+below a plain `---` divider. Everything above the divider is compiled truth —
+current state, rewritten in place as it changes. The Timeline itself is
+append-only, reverse-chronological, one line per entry: `- **YYYY-MM-DD** |
+<source/who> — <what happened>.` Dated status notes, "discussed on X"-type
+asides, stall-callouts — anything that stops being "now" and becomes "history" —
+move here instead of accumulating as asides inside the current-state sections.
+A `⛔ SUPERSEDED` banner (see Archive & deprecation below) stays the visible
+top-level marker regardless — Timeline is additive underneath, not a
+replacement for it. Drop the section from a type's template entirely if you
+don't want to track this for that type.
 
 ## Archive & deprecation (a mechanic, not a taste call — keep or explicitly drop)
 
@@ -121,6 +140,14 @@ lose history. Two different situations, two different moves:
 - Log entries: `## [YYYY-MM-DD] <op> | <title>` so `grep "^## \[" log.md` works.
 - `.gitattributes` sets `log.md merge=union` so it never conflicts, even if
   you branch or run more than one session at once — harmless if you don't.
+- `.claude/settings.json` wires a `SessionEnd` hook to
+  `.claude/scripts/vault-autocommit.sh`: on session exit it stages the vault
+  dirs, secret-scans the staged diff, commits, and pushes in the background —
+  fail-open, so a broken remote or a mid-merge repo just no-ops rather than
+  blocking you. This is shipped as a default, not a mandate: read the script,
+  drop the `git push` line if you want local-only auto-commits, or delete the
+  hook entirely if you'd rather commit by hand. Kill switch without editing
+  anything: set `VAULT_AUTOCOMMIT=0`.
 
 ## Invariants (a checklist worth keeping even if you rewrite everything else)
 
@@ -139,12 +166,33 @@ lose history. Two different situations, two different moves:
 
 ## Operations
 
-`.claude/skills/` ships three minimal skills as a starting point — `ingest`,
-`query`, `lint` — each with the mechanics only, no prescriptive rules baked
-in. Read each `SKILL.md` and edit the TODOs to match how you actually want to
-work. Add your own skills for anything else you want automated (briefs,
-triage, meeting prep, ...) — those are entirely workflow-specific and this
-template intentionally does not ship them, other than one disabled-by-default
+`.claude/skills/` ships five minimal skills as a starting point — `ingest`,
+`query`, `lint`, `context-audit`, `correction-capture` — each with the
+mechanics only, no prescriptive rules baked in. Read each `SKILL.md` and edit
+the TODOs to match how you actually want to work.
+
+- **ingest** — process a source into the wiki: extract entities, create/update
+  pages, update `index.md`/`hot.md`/`log.md`.
+- **query** — answer from the vault following the reading discipline; note
+  the TODO on whether/when a valuable synthesis gets filed back as its own
+  concept page (on request only, or automatically past some length/novelty
+  bar — your call, see the skill file).
+- **lint** — mechanical health check: dead links, orphans, index drift,
+  staleness.
+- **context-audit** — report-only token-hygiene pass over whatever files load
+  unconditionally into every session (this `CLAUDE.md`, `hot.md`, any
+  always-loaded memory file your setup uses); scores them for redundancy,
+  contradictions, staleness, and skill-worthiness, and outputs a ranked
+  cut-list. Never edits anything itself — you apply the cuts.
+- **correction-capture** — the moment you correct a claim the assistant just
+  made, fix the implicated page(s) right then instead of waiting for a lint
+  pass: trace the claim to its source, classify it (the source page itself
+  was wrong / it was confabulated with no page behind it / it was true once
+  and is now stale), fix + log inline.
+
+Add your own skills for anything else you want automated (briefs, triage,
+meeting prep, ...) — those are entirely workflow-specific and this template
+intentionally does not ship them, other than one disabled-by-default
 illustration: `.claude/skills/daily-brief-example/` (paired with
 `_templates/integrations.md`) sketches the shape of a recurring
 pull-from-a-source-then-ingest routine. It's not switched on by anything and

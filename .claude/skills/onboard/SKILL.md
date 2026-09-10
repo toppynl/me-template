@@ -154,7 +154,11 @@ something concrete you write later.
     works. Then run the **`usecases`** skill (`.claude/skills/usecases/`)
     right away, in the same conversation — a fresh vault with no concrete
     next step feels like a technical exercise that ended, not something to
-    actually use. Don't just mention it; walk through it now, so the session
+    actually use. Note that if they connected a mail or calendar tool in
+    step 9, `usecases` will peek at a handful of their real recent messages
+    or upcoming events to make its suggestions concrete rather than
+    abstract — that's expected, not a scope surprise. Don't just mention
+    it; walk through it now, so the session
     ends with 1-2 real things tried, not a to-do list for later.
 
 Do not carry over anything from this template's own suggestions as if it

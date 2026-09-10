@@ -151,9 +151,11 @@ something concrete you write later.
 
 17. **Close the loop out loud.** Tell them onboarding is done, point at
     `me/how-to-use.md` as where to look if they forget how any of this
-    works, and suggest one concrete first action (e.g. "try: ingest
-    something real right now" or "ask me something you'd want this vault to
-    know").
+    works. Then run the **`usecases`** skill (`.claude/skills/usecases/`)
+    right away, in the same conversation — a fresh vault with no concrete
+    next step feels like a technical exercise that ended, not something to
+    actually use. Don't just mention it; walk through it now, so the session
+    ends with 1-2 real things tried, not a to-do list for later.
 
 Do not carry over anything from this template's own suggestions as if it
 were a decision already made on the user's behalf — every default here is a

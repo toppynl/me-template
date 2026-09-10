@@ -18,7 +18,9 @@ A thin scaffold, not a finished system:
   accumulate dated status over time, plus a `SessionEnd` auto-commit hook
   (`.claude/scripts/vault-autocommit.sh`) — both opt-out, not mandates
 - An `onboard` skill that interviews you and turns the scaffold into
-  something that fits *your* workflow
+  something that fits *your* workflow, followed by a `usecases` skill that
+  turns "it's set up" into 1-2 real things tried, tailored to what onboarding
+  learned about you — say "usecase brainstorm" any time you want that again
 
 It deliberately does **not** ship a specific person's rules, thresholds, or
 automation habits (daily briefs, personas, staleness cutoffs, etc.) — those
@@ -61,7 +63,7 @@ now/           fast-changing current state
 wiki/          the knowledge base — people/organisations/systems/... (edit to taste)
 .raw/          immutable source material
 _templates/    frontmatter skeletons per entity type
-.claude/       skills — onboard, ingest, query, lint, context-audit,
+.claude/       skills — onboard, usecases, ingest, query, lint, context-audit,
                correction-capture; scripts/ for the optional auto-commit hook
 archive/       superseded/obsolete pages
 ```

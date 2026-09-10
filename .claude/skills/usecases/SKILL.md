@@ -65,7 +65,7 @@ says yes to trying it.
 
 These are generic patterns, not prescriptions — each is a shape, not a
 finished skill to copy-paste. Present 2–3 that fit what you learned above,
-not all six; a menu of six unrequested ideas is noise, not help.
+not all of them; a long menu of unrequested ideas is noise, not help.
 
 1. **Morning overview** — before you start work, ask it to pull together
    what's on today: calendar, mail that needs a reply, open loops. Useful
@@ -82,7 +82,16 @@ not all six; a menu of six unrequested ideas is noise, not help.
    proven rule at a time, and stays cautious/asks when a match isn't
    confident, is the same shape worth keeping in mind if this grows — but
    don't build that file from a single example; let it earn its structure.)
-3. **Meeting prep** — if a calendar connector is available, look at 1-2 real
+3. **Client/vendor relationship memory** — for anyone who deals with the
+   same external contact again and again (a customer, a supplier, a partner),
+   keep a page on them: what's been promised, what's gone wrong before, how
+   they like things handled. Unlike meeting prep below, there doesn't need
+   to be a meeting on the calendar to trigger it — the moment to use it is
+   just "I'm about to call or email this person again" instead of digging
+   back through old threads. Start with the one contact you deal with most
+   and add to their page after the next real interaction, rather than
+   trying to backfill everyone you've ever dealt with.
+4. **Meeting prep** — if a calendar connector is available, look at 1-2 real
    upcoming events first (see above) and show concretely what the vault can
    or can't yet say about them; otherwise describe the pattern — before
    talking to someone or walking into a meeting, ask what the vault already
@@ -91,23 +100,54 @@ not all six; a menu of six unrequested ideas is noise, not help.
    useful first real page; without a connector, this only pays off once
    there's something in the vault to find, so suggest it after a few real
    entries exist instead.
-4. **Catching decisions** — the moment something real gets decided (in a
+5. **Shift/handover notes** — for anyone working shifts or handing work off
+   to a colleague, keep a running note of what's in progress and what the
+   next person needs to know. This earns its place the first time something
+   gets dropped between shifts because it only lived in someone's head; try
+   it for a single handover and see whether the next person actually finds
+   it useful before treating it as the default.
+6. **Catching decisions** — the moment something real gets decided (in a
    thread, a call, a meeting), say so and have it written down immediately.
    The value is catching it *before* it dissolves into a mail thread nobody
    re-reads.
-5. **Processing something real** — hand it a document, a transcript, a messy
+7. **Recurring problem log** — when the same issue keeps coming back (a
+   customer complaint that repeats, an operational hiccup, the same piece of
+   equipment or step failing again), log each occurrence as it happens
+   instead of treating it as a fresh fire every time. The payoff only shows
+   up after a few entries, once the pattern is visible instead of guessed
+   at — so start logging as soon as something repeats for the second time,
+   not after the tenth.
+8. **Personal runbook** — the first time you work out how to do something
+   fiddly in a system you use for work (an ERP, an internal tool, any
+   process with steps you always forget), write it down right after, while
+   it's fresh. Cheaper than re-solving it next month or asking a colleague
+   the same question again; start with the one thing you've already had to
+   figure out twice, not a full manual of everything you know.
+9. **Processing something real** — hand it a document, a transcript, a messy
    set of notes, and ask for a page out of it. This is the fastest way to see
    whether the vault's structure actually fits your material.
-6. **Fixing mistakes on the spot** — if it gets something wrong, just say so
-   ("that's not right, it's actually X") and have it correct the page
-   immediately, right then — not filed away for later.
+10. **Notes per person you manage** — only relevant if you have direct
+    reports: a private note per person, with recurring themes, commitments
+    made, and things they're working on. This is data about someone else,
+    not you, so be deliberate about it — it's for your own recall, not a
+    substitute for whatever official HR process exists, and it should stay
+    about their work (what they did, said, or committed to), never personal,
+    health, or family information. Start with the one person you talk to
+    most, and keep to what you'd be comfortable being asked about directly.
+11. **Fixing mistakes on the spot** — if it gets something wrong, just say so
+    ("that's not right, it's actually X") and have it correct the page
+    immediately, right then — not filed away for later.
 
 ## How to run this
 
 1. Pick 2–3 that match what's known about them (heavy mail volume → lead
-   with inbox help; low automation appetite → lead with processing/decisions,
-   skip morning overview and inbox help entirely rather than mention and
-   dismiss them).
+   with inbox help; frequent contact with the same external people
+   (customers, suppliers, partners) → lead with client/vendor relationship
+   memory; shift work or regular handoffs to colleagues → lead with
+   shift/handover notes; has direct reports → surface notes per person you
+   manage; low automation appetite → lead with processing/decisions, skip
+   morning overview and inbox help entirely rather than mention and dismiss
+   them).
 2. For inbox help and meeting prep, do the live look-first step above before
    presenting them, so the pitch is already concrete. For the rest, describe
    in one or two sentences and ask if they want to try it right now, on

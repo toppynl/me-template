@@ -161,6 +161,14 @@ not all of them; a long menu of unrequested ideas is noise, not help.
 5. If they pick none right now: say that's fine, and that asking for
    "usecase brainstorm" again later works the same way — nothing is lost by
    not deciding today.
+6. If something they tried live actually lands — they come back to it, or
+   ask for it again a few times — say so out loud and name what graduating
+   it would look like: a scheduled routine (it runs the pattern on its own,
+   e.g. every morning) or a small ruleset file that grows one rule at a time
+   (like the inbox pattern above). That's the moment a usecase becomes a
+   skill — a repeatable thing this vault does, not a one-off you asked for.
+   Don't build it unprompted; name the option and let them decide when
+   they're ready.
 
 Don't turn this into a sales pitch for automation. Someone who says "I just
 want to ask it things sometimes" has a completely valid usecase already —

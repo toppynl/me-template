@@ -17,8 +17,8 @@ used_by: [] # wikilinks
 ## Timeline
 
 <!-- Only if you've adopted the Timeline convention (see CLAUDE.md). Append-only,
-reverse-chronological, one line per entry, oldest untouched:
+chronological ascending, one line per entry, newest entry at the bottom:
 `- **YYYY-MM-DD** | <source/who> — <what happened>.`
-Never edit a past entry, only add new ones. -->
+Never edit a past entry, only append new ones at the bottom. -->
 
 

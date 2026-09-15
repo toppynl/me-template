@@ -23,11 +23,11 @@ or by hand.
    page P to another page Q — a link that already existed before this ingest
    doesn't fire, only ones just added — check Q's frontmatter `type:`. If Q
    is one of the types you carry a `## Timeline` section on, append one line
-   to Q's own Timeline (below its `---` divider, newest entry first):
-   `- **YYYY-MM-DD** | [[P]] — <one-clause reason P now references Q>.` Log
-   line only — never touch Q's compiled-truth section above the divider, and
-   never edit Q's existing Timeline entries. Skip this step entirely if you
-   haven't adopted the Timeline convention.
+   to Q's own Timeline (below its `---` divider, ascending — new entry at the
+   bottom): `- **YYYY-MM-DD** | [[P]] — <one-clause reason P now references
+   Q>.` Log line only — never touch Q's compiled-truth section above the
+   divider, and never edit Q's existing Timeline entries. Skip this step
+   entirely if you haven't adopted the Timeline convention.
 6. <!-- TODO: what counts as significant enough to update hot.md? Define
    your own bar, then note it here. --> Update `hot.md` if this ingest
    changes something that meets that bar.

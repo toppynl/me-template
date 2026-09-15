@@ -107,10 +107,11 @@ already, like decision/event, or too small/navigational to bother, like
 concept/metric/topic), the page carries a `## Timeline` section at the bottom,
 below a plain `---` divider. Everything above the divider is compiled truth —
 current state, rewritten in place as it changes. The Timeline itself is
-append-only, reverse-chronological, one line per entry: `- **YYYY-MM-DD** |
-<source/who> — <what happened>.` Dated status notes, "discussed on X"-type
-asides, stall-callouts — anything that stops being "now" and becomes "history" —
-move here instead of accumulating as asides inside the current-state sections.
+append-only, chronological ascending (newest entry at the bottom), one line
+per entry: `- **YYYY-MM-DD** | <source/who> — <what happened>.` Dated status
+notes, "discussed on X"-type asides, stall-callouts — anything that stops
+being "now" and becomes "history" — move here instead of accumulating as
+asides inside the current-state sections.
 A `⛔ SUPERSEDED` banner (see Archive & deprecation below) stays the visible
 top-level marker regardless — Timeline is additive underneath, not a
 replacement for it. Drop the section from a type's template entirely if you
